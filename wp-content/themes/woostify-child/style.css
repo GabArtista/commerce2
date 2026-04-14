@@ -8,3 +8,225 @@
  Version:      1.0.0
  Text Domain:  woostify-child
 */
+
+/* ============================================================
+   DOZE CREW — Paleta Oficial
+   Primary:    #F97316 (laranja)
+   Dark:       #0A0A0A (preto)
+   ============================================================ */
+
+:root {
+  --dc-primary:        #F97316;
+  --dc-primary-hover:  #EA6C0A;
+  --dc-primary-light:  #FEF3E8;
+  --dc-dark:           #0A0A0A;
+  --dc-dark-soft:      #1A1A1A;
+  --dc-surface:        #F5F5F5;
+  --dc-border:         #E5E5E5;
+  --dc-text:           #0A0A0A;
+  --dc-text-muted:     #6B7280;
+  --dc-white:          #FFFFFF;
+}
+
+/* ---- Botões principais ---- */
+.button,
+.wp-block-button__link,
+button[type="submit"],
+input[type="submit"],
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce .cart .button,
+.woocommerce .cart input.button,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #payment #place_order {
+  background-color: var(--dc-primary) !important;
+  border-color: var(--dc-primary) !important;
+  color: var(--dc-white) !important;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.button:hover,
+.wp-block-button__link:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover,
+.woocommerce #payment #place_order:hover {
+  background-color: var(--dc-primary-hover) !important;
+  border-color: var(--dc-primary-hover) !important;
+  color: var(--dc-white) !important;
+}
+
+/* ---- Links e destaques ---- */
+a {
+  color: var(--dc-primary);
+}
+a:hover {
+  color: var(--dc-primary-hover);
+}
+
+/* ---- Header ---- */
+.site-header,
+#masthead {
+  background-color: var(--dc-dark) !important;
+}
+
+.site-header a,
+#masthead a,
+.site-header .site-title a,
+.main-navigation a {
+  color: var(--dc-white) !important;
+}
+
+.site-header a:hover,
+#masthead a:hover,
+.main-navigation a:hover {
+  color: var(--dc-primary) !important;
+}
+
+/* ---- Footer ---- */
+.site-footer,
+#colophon {
+  background-color: var(--dc-dark) !important;
+  color: var(--dc-white);
+}
+
+.site-footer a,
+#colophon a {
+  color: var(--dc-primary);
+}
+
+.site-footer a:hover,
+#colophon a:hover {
+  color: var(--dc-primary-hover);
+}
+
+/* ---- Preços WooCommerce ---- */
+.woocommerce span.price,
+.woocommerce .price,
+.woocommerce .amount {
+  color: var(--dc-primary) !important;
+}
+
+/* ---- Badges (sale, new) ---- */
+.woocommerce span.onsale,
+.woocommerce .onsale {
+  background-color: var(--dc-primary) !important;
+  border-radius: 4px;
+}
+
+/* ---- Tabs de produto ---- */
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+  border-top-color: var(--dc-primary) !important;
+  color: var(--dc-primary) !important;
+}
+
+/* ---- Breadcrumb ---- */
+.woocommerce .woocommerce-breadcrumb a {
+  color: var(--dc-primary);
+}
+
+/* ---- Paginação ---- */
+.woocommerce nav.woocommerce-pagination ul li a:focus,
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+  background: var(--dc-primary);
+  border-color: var(--dc-primary);
+  color: var(--dc-white);
+}
+
+/* ---- Campos de formulário — focus ---- */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--dc-primary) !important;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.15) !important;
+  outline: none;
+}
+
+/* ---- Rating stars ---- */
+.woocommerce .star-rating span,
+.woocommerce .star-rating::before,
+.woocommerce p.stars a:hover::before,
+.woocommerce p.stars a:hover ~ a::before,
+.woocommerce p.stars.selected a.active::before,
+.woocommerce p.stars.selected a.active ~ a::before {
+  color: var(--dc-primary) !important;
+}
+
+/* ---- Notices WooCommerce ---- */
+.woocommerce-message,
+.woocommerce-info {
+  border-top-color: var(--dc-primary) !important;
+}
+
+.woocommerce-message::before,
+.woocommerce-info::before {
+  color: var(--dc-primary) !important;
+}
+
+/* ---- Mini cart ---- */
+.woostify-header-cart-icon .cart-counter,
+.woostify-header-cart .cart-counter {
+  background-color: var(--dc-primary) !important;
+}
+
+/* ---- Checkout steps / progresso ---- */
+.woocommerce-checkout .wc-forward,
+.woocommerce-checkout .checkout-button {
+  background-color: var(--dc-primary) !important;
+}
+
+/* ---- Status de pedido ---- */
+.woocommerce-order-details .woocommerce-order-overview__status mark,
+.woocommerce .order-status {
+  background-color: var(--dc-primary-light) !important;
+  color: var(--dc-primary) !important;
+}
+
+/* ---- Seção de produtos relacionados / upsells ---- */
+.related.products > h2,
+.upsells.products > h2,
+.cross-sells > h2 {
+  border-left: 4px solid var(--dc-primary);
+  padding-left: 12px;
+  font-weight: 700;
+}
+
+/* ---- Hover nos cards de produto ---- */
+.woocommerce ul.products li.product:hover .woocommerce-loop-product__title {
+  color: var(--dc-primary);
+}
+
+/* ---- Woostify mobile menu toggle ---- */
+.woostify-mobile-menu-toggle span,
+.woostify-mobile-menu-toggle::before,
+.woostify-mobile-menu-toggle::after {
+  background-color: var(--dc-white);
+}
+
+/* ---- Sticky add to cart bar (Woostify feature) ---- */
+.woostify-sticky-add-to-cart {
+  border-top: 3px solid var(--dc-primary);
+}
+
+.woostify-sticky-add-to-cart .woostify-sticky-add-to-cart-btn {
+  background-color: var(--dc-primary) !important;
+  color: var(--dc-white) !important;
+}
