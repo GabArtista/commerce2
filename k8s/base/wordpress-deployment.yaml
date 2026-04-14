@@ -31,7 +31,7 @@ spec:
               echo "mariadb is up"
       containers:
         - name: wordpress
-          image: wordpress:6.7-apache
+          image: wordpress:6.8-apache
           ports:
             - containerPort: 80
           env:
