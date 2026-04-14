@@ -1,0 +1,801 @@
+/*
+ Theme Name:   Astra Child — Doze Crew
+ Theme URI:    https://dozecrew.com
+ Description:  Doze Crew brand child theme for Astra
+ Author:       Doze Crew
+ Author URI:   https://dozecrew.com
+ Template:     astra
+ Version:      1.0.0
+ Text Domain:  astra-child
+*/
+
+/* =========================================================
+   GOOGLE FONTS
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+/* =========================================================
+   CSS CUSTOM PROPERTIES — DOZE CREW BRAND TOKENS
+   ========================================================= */
+:root {
+    --dc-primary:        #F97316;
+    --dc-primary-hover:  #EA6C0A;
+    --dc-primary-light:  #FEF3E8;
+    --dc-dark:           #0A0A0A;
+    --dc-dark-soft:      #1A1A1A;
+    --dc-surface:        #F5F5F5;
+    --dc-border:         #E5E5E5;
+    --dc-text:           #0A0A0A;
+    --dc-text-muted:     #6B7280;
+    --dc-white:          #FFFFFF;
+}
+
+/* =========================================================
+   TYPOGRAPHY — BODY
+   ========================================================= */
+body,
+.ast-single-post,
+.entry-content,
+.woocommerce,
+.woocommerce-page {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* =========================================================
+   TYPOGRAPHY — HEADINGS
+   ========================================================= */
+h1, h2, h3, h4, h5, h6,
+.entry-title,
+.page-title,
+.ast-page-title,
+.woocommerce-loop-product__title,
+.woocommerce-page h1,
+.woocommerce-page h2,
+.woocommerce-page h3,
+.woocommerce-page h4,
+.woocommerce-page h5,
+.woocommerce-page h6 {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+}
+
+/* WooCommerce single product title */
+.product_title.entry-title,
+.woocommerce div.product .product_title {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 900;
+}
+
+/* =========================================================
+   GLOBAL LINKS
+   ========================================================= */
+a,
+a:visited {
+    color: var(--dc-primary);
+}
+
+a:hover,
+a:focus {
+    color: var(--dc-primary-hover);
+}
+
+/* =========================================================
+   HEADER — ASTRA SELECTORS
+   ========================================================= */
+#masthead,
+.site-header,
+.ast-primary-header-bar,
+.main-header-bar,
+.ast-above-header,
+.ast-above-header-bar,
+.ast-below-header,
+.ast-below-header-bar,
+.ast-header-break-point .ast-mobile-header-wrap,
+.ast-mobile-header-wrap {
+    background-color: var(--dc-dark);
+    background: var(--dc-dark);
+}
+
+/* Astra header site title / logo */
+.site-title a,
+.site-title a:visited,
+.ast-site-identity .site-title a {
+    color: var(--dc-white);
+}
+
+.site-title a:hover {
+    color: var(--dc-primary);
+}
+
+/* Header navigation links */
+.ast-nav-menu a,
+.ast-nav-menu > li > a,
+.ast-primary-navigation a,
+.main-header-bar .ast-nav-menu a,
+.main-header-bar-navigation a,
+.ast-above-header-navigation a,
+.ast-below-header-navigation a,
+#site-navigation a,
+.primary-navigation a {
+    color: var(--dc-white);
+}
+
+.ast-nav-menu a:hover,
+.ast-nav-menu > li > a:hover,
+.ast-primary-navigation a:hover,
+.main-header-bar .ast-nav-menu a:hover,
+.main-header-bar-navigation a:hover,
+.ast-above-header-navigation a:hover,
+.ast-below-header-navigation a:hover,
+#site-navigation a:hover,
+.primary-navigation a:hover,
+.ast-nav-menu .current-menu-item > a,
+.ast-nav-menu .current_page_item > a,
+.ast-nav-menu .current-menu-ancestor > a {
+    color: var(--dc-primary);
+}
+
+/* Dropdown menus */
+.ast-nav-menu .sub-menu,
+.ast-nav-menu .children,
+.main-header-bar .sub-menu {
+    background-color: var(--dc-dark-soft);
+    border-top-color: var(--dc-primary);
+}
+
+.ast-nav-menu .sub-menu a,
+.ast-nav-menu .children a,
+.main-header-bar .sub-menu a {
+    color: var(--dc-white);
+}
+
+.ast-nav-menu .sub-menu a:hover,
+.ast-nav-menu .children a:hover,
+.main-header-bar .sub-menu a:hover {
+    color: var(--dc-primary);
+    background-color: var(--dc-dark);
+}
+
+/* Mobile header */
+.ast-header-break-point .ast-mobile-pop-menu,
+.ast-header-break-point .main-header-bar,
+.ast-mobile-header-wrap .main-header-bar,
+.ast-header-break-point #ast-mobile-popup,
+.ast-header-break-point .ast-above-header,
+.ast-header-break-point .ast-below-header {
+    background-color: var(--dc-dark);
+}
+
+.ast-header-break-point .main-navigation,
+.ast-header-break-point #site-navigation,
+.ast-header-break-point .ast-nav-menu,
+.ast-header-break-point .ast-primary-navigation {
+    background-color: var(--dc-dark-soft);
+}
+
+.ast-header-break-point .ast-nav-menu a,
+.ast-header-break-point #site-navigation a,
+.ast-mobile-popup-content a {
+    color: var(--dc-white);
+}
+
+.ast-header-break-point .ast-nav-menu a:hover,
+.ast-header-break-point #site-navigation a:hover,
+.ast-mobile-popup-content a:hover {
+    color: var(--dc-primary);
+}
+
+/* Hamburger / toggle button */
+.ast-menu-toggle,
+.ast-menu-toggle .menu-toggle,
+.menu-toggle {
+    color: var(--dc-white);
+}
+
+.ast-menu-toggle:hover,
+.menu-toggle:hover {
+    color: var(--dc-primary);
+}
+
+/* =========================================================
+   CART ICON COUNTER
+   ========================================================= */
+.ast-cart-menu-wrap .count,
+.ast-site-header-cart .count,
+.woo-overlay-cart-info .count,
+.ast-site-header-cart-li .count,
+.ast-header-woo-cart .count,
+.site-header .ast-cart-menu-wrap span.count {
+    background-color: var(--dc-primary);
+    color: var(--dc-white);
+    border-color: var(--dc-primary);
+}
+
+.ast-site-header-cart .ast-icon,
+.ast-cart-menu-wrap .ast-icon,
+.ast-header-woo-cart .ast-icon {
+    color: var(--dc-white);
+}
+
+.ast-site-header-cart .ast-icon:hover,
+.ast-cart-menu-wrap .ast-icon:hover,
+.ast-header-woo-cart .ast-icon:hover {
+    color: var(--dc-primary);
+}
+
+/* =========================================================
+   FOOTER — ASTRA SELECTORS
+   ========================================================= */
+#colophon,
+.site-footer,
+.ast-small-footer,
+.ast-small-footer-wrap,
+.footer-widget-area,
+.ast-footer-widget-area,
+.ast-above-footer,
+.ast-above-footer-bar,
+.ast-below-footer,
+.ast-below-footer-bar,
+.ast-footer-overlay,
+.ast-primary-footer-bar,
+[class*="ast-footer"] {
+    background-color: var(--dc-dark);
+    background: var(--dc-dark);
+}
+
+#colophon,
+.site-footer,
+.ast-small-footer,
+.ast-small-footer-wrap,
+.footer-widget-area,
+.ast-footer-widget-area,
+.ast-above-footer,
+.ast-below-footer,
+[class*="ast-footer"] {
+    color: var(--dc-white);
+}
+
+#colophon h1, #colophon h2, #colophon h3, #colophon h4, #colophon h5, #colophon h6,
+.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6,
+.footer-widget-area h1, .footer-widget-area h2, .footer-widget-area h3,
+.footer-widget-area h4, .footer-widget-area h5, .footer-widget-area h6 {
+    color: var(--dc-white);
+}
+
+#colophon p,
+.site-footer p,
+.footer-widget-area p,
+.ast-small-footer p,
+.ast-small-footer-section p {
+    color: var(--dc-white);
+}
+
+#colophon a,
+.site-footer a,
+.footer-widget-area a,
+.ast-footer-widget-area a,
+.ast-small-footer a,
+.ast-small-footer-section a,
+.ast-small-footer .ast-footer-copyright a {
+    color: var(--dc-primary);
+}
+
+#colophon a:hover,
+.site-footer a:hover,
+.footer-widget-area a:hover,
+.ast-footer-widget-area a:hover,
+.ast-small-footer a:hover,
+.ast-small-footer-section a:hover {
+    color: var(--dc-primary-hover);
+}
+
+.ast-footer-copyright,
+.ast-small-footer-section {
+    color: var(--dc-white);
+}
+
+/* =========================================================
+   BUTTONS — GLOBAL + WORDPRESS
+   ========================================================= */
+.ast-button,
+.ast-button:visited,
+.button,
+.button:visited,
+a.button,
+a.button:visited,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+button[type="submit"],
+.wp-block-button__link,
+.wp-block-button .wp-block-button__link,
+.wp-block-button__link:not(.has-background) {
+    background-color: var(--dc-primary);
+    color: var(--dc-white);
+    border: none;
+    border-radius: 2px;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.ast-button:hover,
+.ast-button:focus,
+.button:hover,
+.button:focus,
+a.button:hover,
+a.button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+button:hover,
+button:focus,
+button[type="submit"]:hover,
+button[type="submit"]:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+    background-color: var(--dc-primary-hover);
+    color: var(--dc-white);
+    text-decoration: none;
+}
+
+/* =========================================================
+   BUTTONS — WOOCOMMERCE
+   ========================================================= */
+.woocommerce a.button,
+.woocommerce a.button:visited,
+.woocommerce button.button,
+.woocommerce button.button:visited,
+.woocommerce input.button,
+.woocommerce input.button:visited,
+.woocommerce a.button.alt,
+.woocommerce a.button.alt:visited,
+.woocommerce button.button.alt,
+.woocommerce button.button.alt:visited,
+.woocommerce input.button.alt,
+.woocommerce input.button.alt:visited,
+.woocommerce #respond input#submit,
+.woocommerce #respond input#submit:visited,
+.woocommerce .cart .button,
+.woocommerce .cart .button:visited,
+.woocommerce .cart input.button,
+.woocommerce .cart input.button:visited,
+.woocommerce #payment #place_order,
+.woocommerce-page #payment #place_order,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout #payment input#place_order,
+.added_to_cart.wc-forward,
+.wc-forward {
+    background-color: var(--dc-primary) !important;
+    color: var(--dc-white) !important;
+    border: none !important;
+    border-radius: 2px !important;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.woocommerce a.button:hover,
+.woocommerce a.button:focus,
+.woocommerce button.button:hover,
+.woocommerce button.button:focus,
+.woocommerce input.button:hover,
+.woocommerce input.button:focus,
+.woocommerce a.button.alt:hover,
+.woocommerce a.button.alt:focus,
+.woocommerce button.button.alt:hover,
+.woocommerce button.button.alt:focus,
+.woocommerce input.button.alt:hover,
+.woocommerce input.button.alt:focus,
+.woocommerce #respond input#submit:hover,
+.woocommerce #respond input#submit:focus,
+.woocommerce .cart .button:hover,
+.woocommerce .cart .button:focus,
+.woocommerce .cart input.button:hover,
+.woocommerce .cart input.button:focus,
+.woocommerce #payment #place_order:hover,
+.woocommerce #payment #place_order:focus,
+.woocommerce-page #payment #place_order:hover,
+.woocommerce-page #payment #place_order:focus,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:focus,
+.added_to_cart.wc-forward:hover,
+.wc-forward:hover {
+    background-color: var(--dc-primary-hover) !important;
+    color: var(--dc-white) !important;
+}
+
+/* =========================================================
+   WOOCOMMERCE — PRICES
+   ========================================================= */
+.woocommerce .price,
+.woocommerce span.price,
+.woocommerce p.price,
+.woocommerce ins .amount,
+.woocommerce ins span.amount,
+.woocommerce .woocommerce-Price-amount,
+.woocommerce .woocommerce-Price-amount.amount,
+.woocommerce-page .price .amount,
+.woocommerce span.amount,
+.woocommerce p.price .amount,
+.woocommerce-loop-product__price .woocommerce-Price-amount {
+    color: var(--dc-primary);
+    font-weight: 700;
+}
+
+.woocommerce del .amount,
+.woocommerce del span.amount,
+.woocommerce .price del .woocommerce-Price-amount {
+    color: var(--dc-text-muted);
+}
+
+/* =========================================================
+   WOOCOMMERCE — BADGES
+   ========================================================= */
+.woocommerce span.onsale,
+.woocommerce-page span.onsale,
+.woocommerce ul.products li.product .onsale,
+.woocommerce .onsale {
+    background-color: var(--dc-primary);
+    color: var(--dc-white);
+    border-radius: 2px;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+/* =========================================================
+   WOOCOMMERCE — PRODUCT TABS
+   ========================================================= */
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active,
+.woocommerce-tabs ul.tabs li.active {
+    color: var(--dc-primary);
+    border-top: 3px solid var(--dc-primary);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a,
+.woocommerce-tabs ul.tabs li a {
+    color: var(--dc-text-muted);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
+.woocommerce-tabs ul.tabs li a:hover {
+    color: var(--dc-primary);
+}
+
+/* =========================================================
+   WOOCOMMERCE — BREADCRUMBS
+   ========================================================= */
+.woocommerce .woocommerce-breadcrumb a,
+.woocommerce-breadcrumb a,
+.woocommerce nav.woocommerce-breadcrumb a {
+    color: var(--dc-primary);
+}
+
+.woocommerce .woocommerce-breadcrumb a:hover,
+.woocommerce-breadcrumb a:hover {
+    color: var(--dc-primary-hover);
+}
+
+/* =========================================================
+   WOOCOMMERCE — PAGINATION
+   ========================================================= */
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span,
+.woocommerce-pagination .page-numbers a,
+.woocommerce-pagination .page-numbers span {
+    color: var(--dc-primary);
+    border-color: var(--dc-primary);
+}
+
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li a:focus,
+.woocommerce nav.woocommerce-pagination ul li span.current,
+.woocommerce-pagination .page-numbers a:hover,
+.woocommerce-pagination .page-numbers span.current {
+    background-color: var(--dc-primary);
+    color: var(--dc-white);
+    border-color: var(--dc-primary);
+}
+
+/* =========================================================
+   FORM FOCUS STATES
+   ========================================================= */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus,
+.woocommerce input:focus,
+.woocommerce select:focus,
+.woocommerce textarea:focus,
+.woocommerce .input-text:focus,
+.woocommerce-page input:focus,
+.woocommerce-page select:focus,
+.woocommerce-page textarea:focus {
+    border-color: var(--dc-primary) !important;
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2) !important;
+    outline: none;
+}
+
+/* =========================================================
+   RATING STARS
+   ========================================================= */
+.woocommerce .star-rating span::before,
+.woocommerce .star-rating::before,
+.woocommerce p.stars a,
+.woocommerce p.stars a::before,
+.woocommerce .star-rating span,
+.star-rating span::before {
+    color: var(--dc-primary);
+}
+
+.woocommerce p.stars a:hover::before,
+.woocommerce p.stars a:hover ~ a::before,
+.woocommerce p.stars.selected a.active::before,
+.woocommerce p.stars.selected a.active ~ a::before,
+.woocommerce p.stars.selected a:not(.active)::before {
+    color: var(--dc-primary);
+}
+
+/* =========================================================
+   WOOCOMMERCE — NOTICES
+   ========================================================= */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-notices-wrapper .woocommerce-message,
+.woocommerce-notices-wrapper .woocommerce-info {
+    border-top-color: var(--dc-primary) !important;
+}
+
+.woocommerce-message::before,
+.woocommerce-info::before {
+    color: var(--dc-primary);
+}
+
+/* =========================================================
+   PRODUCT CARDS — LOOP
+   ========================================================= */
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h2.woocommerce-loop-product__title {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.woocommerce ul.products li.product a:hover .woocommerce-loop-product__title,
+.woocommerce ul.products li.product:hover .woocommerce-loop-product__title {
+    color: var(--dc-primary);
+}
+
+/* Loop add-to-cart: outline orange → fill on hover */
+.woocommerce ul.products li.product a.button,
+.woocommerce ul.products li.product a.add_to_cart_button,
+.woocommerce ul.products li.product a.product_type_simple {
+    background-color: transparent !important;
+    color: var(--dc-primary) !important;
+    border: 2px solid var(--dc-primary) !important;
+    border-radius: 2px !important;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.woocommerce ul.products li.product a.button:hover,
+.woocommerce ul.products li.product a.add_to_cart_button:hover,
+.woocommerce ul.products li.product a.product_type_simple:hover {
+    background-color: var(--dc-primary) !important;
+    color: var(--dc-white) !important;
+    border-color: var(--dc-primary) !important;
+}
+
+/* =========================================================
+   RELATED / UPSELLS / CROSS-SELLS HEADINGS
+   ========================================================= */
+.woocommerce .related > h2,
+.woocommerce .upsells > h2,
+.woocommerce .cross-sells > h2,
+.woocommerce section.related h2,
+.woocommerce section.upsells h2,
+.woocommerce section.cross-sells h2 {
+    border-left: 4px solid var(--dc-primary);
+    padding-left: 12px;
+    font-weight: 900;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    color: var(--dc-dark);
+}
+
+/* =========================================================
+   STICKY ADD-TO-CART (ASTRA PRO FEATURE)
+   ========================================================= */
+.astra-woo-sticky-add-to-cart,
+.ast-woo-sticky-add-to-cart,
+.woo-sticky-add-to-cart {
+    border-top: 2px solid var(--dc-primary) !important;
+    background-color: var(--dc-dark-soft) !important;
+}
+
+.woo-sticky-add-to-cart__btn,
+.astra-woo-sticky-add-to-cart .button,
+.ast-woo-sticky-add-to-cart .button,
+.woo-sticky-add-to-cart .button,
+.astra-woo-sticky-add-to-cart a.button,
+.ast-woo-sticky-add-to-cart a.button {
+    background-color: var(--dc-primary) !important;
+    color: var(--dc-white) !important;
+    border-color: var(--dc-primary) !important;
+    border-radius: 2px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+}
+
+.woo-sticky-add-to-cart__btn:hover,
+.astra-woo-sticky-add-to-cart .button:hover,
+.ast-woo-sticky-add-to-cart .button:hover,
+.woo-sticky-add-to-cart .button:hover {
+    background-color: var(--dc-primary-hover) !important;
+    color: var(--dc-white) !important;
+}
+
+.astra-woo-sticky-add-to-cart .woo-sticky-add-to-cart__title,
+.ast-woo-sticky-add-to-cart .product-title,
+.woo-sticky-add-to-cart .product-title {
+    color: var(--dc-white);
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+}
+
+.astra-woo-sticky-add-to-cart .woo-sticky-add-to-cart__price,
+.astra-woo-sticky-add-to-cart .price,
+.ast-woo-sticky-add-to-cart .price {
+    color: var(--dc-primary);
+}
+
+/* =========================================================
+   CHECKOUT — ORDER REVIEW
+   ========================================================= */
+.woocommerce-checkout #order_review .order-total td,
+.woocommerce-checkout #order_review .order-total .amount,
+.woocommerce table.shop_table tfoot tr.order-total td {
+    color: var(--dc-primary);
+    font-weight: 700;
+}
+
+.woocommerce #payment div.payment_box,
+.woocommerce-page #payment div.payment_box {
+    background-color: var(--dc-primary-light);
+}
+
+/* =========================================================
+   MY ACCOUNT — NAVIGATION
+   ========================================================= */
+.woocommerce-MyAccount-navigation ul li a,
+.woocommerce-account .woocommerce-MyAccount-navigation ul li a {
+    color: var(--dc-text-muted);
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.woocommerce-MyAccount-navigation ul li.is-active a,
+.woocommerce-MyAccount-navigation ul li a:hover,
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a,
+.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover {
+    color: var(--dc-primary);
+}
+
+.woocommerce-MyAccount-navigation ul li.is-active,
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active {
+    border-left: 3px solid var(--dc-primary);
+}
+
+/* =========================================================
+   ORDER STATUS BADGES
+   ========================================================= */
+.woocommerce-order-status,
+mark.order-status,
+.woocommerce-account .woocommerce-orders-table .woocommerce-orders-table__cell-order-status mark,
+.woocommerce td.order-status mark {
+    background-color: var(--dc-primary-light) !important;
+    color: var(--dc-primary) !important;
+    border-radius: 2px;
+    font-weight: 700;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+}
+
+/* =========================================================
+   ASTRA SPECIFIC OVERRIDES
+   ========================================================= */
+
+/* Sidebar widget titles */
+.widget-title,
+.widgettitle {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    border-bottom: 2px solid var(--dc-primary);
+    padding-bottom: 8px;
+}
+
+/* Gutenberg blocks — primary button */
+.wp-block-button.is-style-fill .wp-block-button__link,
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+    background-color: var(--dc-primary);
+    color: var(--dc-white);
+    border-radius: 2px;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.wp-block-button.is-style-fill .wp-block-button__link:hover,
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+    background-color: var(--dc-primary-hover);
+    color: var(--dc-white);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+    color: var(--dc-primary);
+    border-color: var(--dc-primary);
+    border-radius: 2px;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background-color: var(--dc-primary);
+    color: var(--dc-white);
+}
+
+/* =========================================================
+   MISC
+   ========================================================= */
+hr {
+    border-color: var(--dc-border);
+}
+
+::selection {
+    background-color: var(--dc-primary);
+    color: var(--dc-white);
+}
+
+::-moz-selection {
+    background-color: var(--dc-primary);
+    color: var(--dc-white);
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+@media (max-width: 768px) {
+    .woocommerce ul.products li.product a.button,
+    .woocommerce ul.products li.product a.add_to_cart_button {
+        background-color: var(--dc-primary) !important;
+        color: var(--dc-white) !important;
+        border-color: var(--dc-primary) !important;
+    }
+
+    .woocommerce .related > h2,
+    .woocommerce .upsells > h2,
+    .woocommerce .cross-sells > h2 {
+        font-size: 1.25rem;
+    }
+}
