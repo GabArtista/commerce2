@@ -1,0 +1,48 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.crt
+
+# WordPress runtime (gerenciado pela imagem Docker, nao versionar)
+wordpress/
+public/
+web/
+wp/
+wp-admin/
+wp-includes/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/backup*
+wp-content/ai1wm-backups/
+
+# Plugins de terceiros (instalados via WP-CLI, nao versionar)
+wp-content/plugins/
+
+# Tema pai Woostify (instalado via WP-CLI)
+wp-content/themes/woostify/
+
+# Scripts com segredos preenchidos
+scripts/create-secrets.sh
+
+# Logs
+*.log
+logs/
+
+# Local db dumps
+*.sql
+*.sql.gz
+*.sqlite
+
+# Node/composer artifacts if added later
+node_modules/
+vendor/
