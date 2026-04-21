@@ -96,8 +96,8 @@ spec:
                 define('WP_HOME', 'https://shop.dozecrew.com');
                 define('WP_SITEURL', 'https://shop.dozecrew.com');
                 define('FORCE_SSL_ADMIN', true);
-                define('WP_MEMORY_LIMIT', '384M');
-                define('WP_MAX_MEMORY_LIMIT', '1024M');
+                define('WP_MEMORY_LIMIT', '512M');
+                define('WP_MAX_MEMORY_LIMIT', '1536M');
                 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
                   $_SERVER['HTTPS'] = 'on';
                 }
@@ -106,11 +106,11 @@ spec:
               mountPath: /var/www/html/wp-content
           resources:
             requests:
-              cpu: 200m
-              memory: 512Mi
+              cpu: 300m
+              memory: 768Mi
             limits:
-              cpu: 1000m
-              memory: 1536Mi
+              cpu: 2000m
+              memory: 2560Mi
           livenessProbe:
             httpGet:
               path: /wp-includes/images/blank.gif
