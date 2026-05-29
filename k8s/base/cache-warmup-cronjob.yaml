@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cache-warmup
+  namespace: ecommerce
+spec:
+  schedule: "*/30 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: warmer
+              image: curlimages/curl:8.11
+              command:
+                - sh
+                - -c
+                - |
+                  for url in \
+                    "https://shop.dozecrew.com/wp-cron.php?doing_wp_cron=1" \
+                    "https://shop.dozecrew.com/" \
+                    "https://shop.dozecrew.com/shop/" \
+                    "https://shop.dozecrew.com/lojistas/"; do
+                    echo "Warming: $url"
+                    curl -sf -o /dev/null -w "  %{http_code} %{time_total}s\n" "$url" 2>/dev/null || echo "  FAILED"
+                  done
+          restartPolicy: OnFailure

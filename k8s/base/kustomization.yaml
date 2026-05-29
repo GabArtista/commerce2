@@ -11,3 +11,4 @@ resources:
   - wordpress-service.yaml
   - ingress.yaml
   - php-custom-ini-configmap.yaml
+  - cache-warmup-cronjob.yaml
