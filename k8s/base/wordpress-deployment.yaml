@@ -104,6 +104,9 @@ spec:
           volumeMounts:
             - name: wordpress-content
               mountPath: /var/www/html/wp-content
+            - name: php-ini
+              mountPath: /usr/local/etc/php/conf.d/custom.ini
+              subPath: custom.ini
           resources:
             requests:
               cpu: 300m
@@ -130,3 +133,6 @@ spec:
         - name: wordpress-content
           persistentVolumeClaim:
             claimName: wordpress-content
+        - name: php-ini
+          configMap:
+            name: php-custom-ini
